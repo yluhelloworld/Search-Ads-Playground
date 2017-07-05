@@ -5,6 +5,9 @@ import libmc
 from libmc import (
     MC_HASH_MD5, MC_POLL_TIMEOUT, MC_CONNECT_TIMEOUT, MC_RETRY_TIMEOUT
 )
+
+# Store feature data of keys in memcached
+
 def store_feature(feature_dir,key_prefix,memcache_client):
     path = feature_dir + "/part*"
 
@@ -25,7 +28,7 @@ def store_feature(feature_dir,key_prefix,memcache_client):
 
 
 if __name__ == "__main__":
-    input_dir = “./SearchAds/data/log/"
+    input_dir = './SearchAds/data/log/'
     #client = memcache.Client([('127.0.0.1', 11218)])
     client = libmc.Client(
     ["127.0.0.1:11218"],comp_threshold=0, noreply=False, prefix=None,hash_fn=MC_HASH_MD5, failover=False

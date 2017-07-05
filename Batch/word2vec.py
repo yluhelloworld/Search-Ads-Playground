@@ -4,6 +4,9 @@ import json
 from pyspark import SparkContext
 from pyspark.mllib.feature import Word2Vec
 
+# Generate word2evtor model base on keywords of ads
+
+
 training_file = sys.argv[1]
 synonyms_data_file = sys.argv[2]
 

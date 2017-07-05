@@ -7,6 +7,10 @@ import libmc
 from libmc import (
     MC_HASH_MD5, MC_POLL_TIMEOUT, MC_CONNECT_TIMEOUT, MC_RETRY_TIMEOUT
 )
+
+# Generate rewrite query base on synonym list and store in memcached 
+
+
 mc = libmc.Client(
 ["127.0.0.1:11219"],comp_threshold=0, noreply=False, prefix=None,hash_fn=MC_HASH_MD5, failover=False
 )

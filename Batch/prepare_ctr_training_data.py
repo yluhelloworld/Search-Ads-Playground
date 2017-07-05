@@ -6,13 +6,15 @@ from libmc import (
     MC_HASH_MD5, MC_POLL_TIMEOUT, MC_CONNECT_TIMEOUT, MC_RETRY_TIMEOUT
 )
 
+# Gnerate training files - Process log file and select features from cachee
+
 from pyspark import SparkContext
 def process_query(query):
     fields = query.split(" ")
     output = "_".join(fields)
     return output
 
-#Device IP, Device id,Session id,Query,AdId,CampaignId,Ad_category_Query_category(0/1),clicked(0/1)
+# log: Device IP, Device id,Session id,Query,AdId,CampaignId,Ad_category_Query_category(0/1),clicked(0/1)
 def prepare_feature_val(fields,memcache_client):
     device_ip = fields[0]
     device_id = fields[1]
@@ -104,7 +106,7 @@ if __name__ == "__main__":
         ["127.0.0.1:11218"],comp_threshold=0, noreply=False, prefix=None,hash_fn=MC_HASH_MD5, failover=False
     )
     sc = SparkContext(appName="CTR_Features")
-    output_dir = “./SearchAds/data/log/"
+    output_dir = './SearchAds/data/log/'
     data = sc.textFile(file).map(lambda line: line.encode("utf8", "ignore").split(','))
     feature_data = data.map(lambda fields: (prepare_feature_val(fields, client),int(fields[7])))
 
