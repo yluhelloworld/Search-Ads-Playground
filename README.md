@@ -7,7 +7,7 @@ Online search advertisement platform &amp; Realtime Campaign Monitoring
 Search advertising is placing online advertisments on front end pages that show results to users from their search engine queries. This search ads server takes thousands of product data as ads candidates and selects, filters, ranks, allocates and prices the ads when search query comes in. The selection and ranking of search ads is based on the quality of ads and the bid price offered by advertisers.
 
 
-![alt text](s3-us-west-1.amazonaws.com/hello-mytest/Screen+Shot+2017-07-05+at+7.21.31+AM.png "Logo Title Text 1")
+![alt text](https://s3-us-west-1.amazonaws.com/hello-mytest/Screen+Shot+2017-07-05+at+7.21.31+AM.png "Logo Title Text 1")
 
 
 ### Query Understanding
@@ -50,5 +50,5 @@ The real time campaign monitor system is built for collecting the ads relevant e
 
 
 ### Dashboard Visualization
-![alt text](https://s3-us-west-1.amazonaws.com/hello-mytest/Screen+Shot+2017-07-05+at+7.13.12+AM.png"Logo Title Text 1")
+![alt text](https://s3-us-west-1.amazonaws.com/hello-mytest/Screen+Shot+2017-07-05+at+7.13.12+AM.png "Logo Title Text 1")
 
