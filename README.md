@@ -4,9 +4,11 @@ Online search advertisement platform &amp; Realtime Campaign Monitoring
 
 
 ## Online Search Ads Platform
-Search ads
+Search advertising is placing online advertisments on front end pages that show results to users from their search engine queries. This search ads server takes thousands of product data as ads candidates and selects, filters, ranks, allocates and prices the ads when search query comes in. The selection and ranking of search ads is based on the quality of ads and the bid price offered by advertisers.
 
-search query -> 
+
+![alt text](s3-us-west-1.amazonaws.com/hello-mytest/Screen+Shot+2017-07-05+at+7.21.31+AM.png "Logo Title Text 1")
+
 
 ### Query Understanding
 * clean the text by Lucean
@@ -14,15 +16,17 @@ search query ->
 
 ### Query Relevancy Matching
 Ads candiate will first be evaluated and filtered by relevance score. Relevance score is to measure how relevant query is to key words in ads. Here the relevance score = number of word match query / total number of words in key words. For quick retreival of ads infomation, the inverted index of ads keywords were built and store in cache.
+
+
 The data layer for supporting online system:
-*  - Forward index for Ad detail information (MySQL)
-*  - Inverted index for Ad keywords (Memcached)
+*  Forward index for Ad detail information (MySQL)
+*  Inverted index for Ad keywords (Memcached)
 
 ### P-Click Prediction
 The probability of user click (p-click) plays an important role in ads ranking.
 
 Use spark ML process simulated user click log data and generate prediction model.
-*  -Feature space
+*  Feature space
 ** [click]
 *
 
@@ -30,6 +34,8 @@ Use spark ML process simulated user click log data and generate prediction model
 ### Online Ads Ranking and Pricing
 
 
+### System
+![alt text](https://s3-us-west-1.amazonaws.com/hello-mytest/Screen+Shot+2017-07-05+at+7.36.09+AM.png "Logo Title Text 1")
 
 
 ## Real Time Campaign Monitor
@@ -40,9 +46,9 @@ The real time campaign monitor system is built for collecting the ads relevant e
 
 
 ### Streaming Pipeline
-[picture]
+![alt text](https://s3-us-west-1.amazonaws.com/hello-mytest/Screen+Shot+2017-07-05+at+7.28.54+AM.png "Logo Title Text 1")
 
 
 ### Dashboard Visualization
-[picture]
+![alt text](https://s3-us-west-1.amazonaws.com/hello-mytest/Screen+Shot+2017-07-05+at+7.13.12+AM.png"Logo Title Text 1")
 
