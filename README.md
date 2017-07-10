@@ -34,8 +34,8 @@ Use spark ML process simulated user click log data and generate prediction model
 
 ### Online Ads Ranking and Pricing
 Quality Score = 0.25 * Relevance Score + 0.75 * pClick
-Rank Score = Quality Score * Bid
 
+Rank Score = Quality Score * Bid
 
 Price(Cost Per Click) = next rank score / current quality score + 0.01
 
