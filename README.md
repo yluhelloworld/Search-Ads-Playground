@@ -11,8 +11,8 @@ Search advertising is placing online advertisments on front end pages that show 
 
 
 ### Query Understanding
-* clean the text by Lucean
-* train word2vector model using ads keywords corpus and use synonyms to generate rewrite query
+* clean the text by Lucean 
+* train word2vector model using ads keywords corpus and use synonyms to rewrite query
 
 ### Query Relevancy Matching
 Ads candiate will first be evaluated and filtered by relevance score. Relevance score is to measure how relevant query is to key words in ads. Here the relevance score = number of word match query / total number of words in key words. For quick retreival of ads infomation, the inverted index of ads keywords were built and store in cache.
@@ -27,10 +27,17 @@ The probability of user click (p-click) plays an important role in ads ranking.
 
 Use spark ML process simulated user click log data and generate prediction model.
 *  Feature space
+
+
 *  Model
 
 
 ### Online Ads Ranking and Pricing
+Quality Score = 0.25 * Relevance Score + 0.75 * pClick
+Rank Score = Quality Score * Bid
+
+
+Price(Cost Per Click) = next rank score / current quality score + 0.01
 
 
 ### System
