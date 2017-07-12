@@ -26,11 +26,16 @@ The data layer for supporting online system:
 The probability of user click (p-click) plays an important role in ads ranking.
 
 Use spark ML process simulated user click log data and generate prediction model.
-*  Feature space
+*  Click log
+log: Device IP, Device id,Session id,Query,AdId,CampaignId,Ad_category_Query_category(0/1),clicked(0/1)
 
+*  Feature space
+pClick Features extracted from search log and stored in key-value store
+![alt text](https://s3-us-west-1.amazonaws.com/hello-mytest/Screen+Shot+2017-07-12+at+7.06.47+AM.png "Logo Title Text 1")
 
 *  Model
-
+Logistic Regression
+Gradient Boosting Tree
 
 ### Online Ads Ranking and Pricing
 Quality Score = 0.25 * Relevance Score + 0.75 * pClick
